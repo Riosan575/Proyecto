@@ -36,13 +36,13 @@ namespace VuelaLibre.Controllers
             return CreateHash(password);
         }
         [HttpGet]
-        public ActionResult Register() // GET
+        public IActionResult Register() // GET
         {
             return View("Register", new Account());
         }
 
         [HttpPost]
-        public ActionResult Register(Account account) // POST
+        public IActionResult Register(Account account) // POST
         {
 
             if (ModelState.IsValid)
@@ -93,6 +93,23 @@ namespace VuelaLibre.Controllers
             var hash = sha.ComputeHash(Encoding.Default.GetBytes(input));
 
             return Convert.ToBase64String(hash);
+        }
+        [HttpGet]
+        public IActionResult CrearVuelo()
+        {
+            return View(new Account());
+        }
+        [HttpPost]
+        public IActionResult CrearVuelo(Account account) // POST
+        {
+
+            if (ModelState.IsValid)
+            {
+                _context.Accounts.Add(account);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View("CrearVuelo", account);
         }
     }
 }
