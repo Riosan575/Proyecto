@@ -5,7 +5,6 @@ Template 2095 Level
 http://www.tooplate.com/view/2095-level
 
 */
-
 body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -738,7 +737,6 @@ video {
 .iquitos {
     width: 100%;
     padding: 5%;
-    border-radius: 30px;
     text-shadow: 5px 5px 5px black;
     background-position: center;
     background-repeat: no-repeat;
@@ -749,7 +747,6 @@ video {
 .tarapoto {
     width: 100%;
     padding: 5%;
-    border-radius: 30px;
     text-shadow: 5px 5px 5px black;
     background-position: center;
     background-repeat: no-repeat;
@@ -760,7 +757,6 @@ video {
 .arequipa {
     width: 100%;
     padding: 5%;
-    border-radius: 30px;
     text-shadow: 5px 5px 5px black;
     background-position: center;
     background-repeat: no-repeat;
@@ -771,7 +767,6 @@ video {
 .cajamarca {
     width: 100%;
     padding: 5%;
-    border-radius: 30px;
     text-shadow: 5px 5px 5px black;
     background-position: center;
     background-repeat: no-repeat;
@@ -782,7 +777,6 @@ video {
 .trujillo {
     width: 100%;
     padding: 5%;
-    border-radius: 30px;
     text-shadow: 5px 5px 5px black;
     background-position: center;
     background-repeat: no-repeat;
@@ -793,7 +787,6 @@ video {
 .piura {
     width: 100%;
     padding: 5%;
-    border-radius: 30px;
     text-shadow: 5px 5px 5px black;
     background-position: center;
     background-repeat: no-repeat;
@@ -801,7 +794,5 @@ video {
     background-image: url("../../img/piura.png");
 }
 .carrousel {
-    margin: 140px;
-    top: -230px;
-    bottom: 100px;
+    top: -90px;
 }
