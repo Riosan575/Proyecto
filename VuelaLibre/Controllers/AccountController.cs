@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using VuelaLibre.Models;
+using VuelaLibre.Models.Maps;
 
 namespace VuelaLibre.Controllers
 {
@@ -36,13 +37,13 @@ namespace VuelaLibre.Controllers
             return CreateHash(password);
         }
         [HttpGet]
-        public IActionResult Register() // GET
+        public ActionResult Register() // GET
         {
             return View("Register", new Account());
         }
 
         [HttpPost]
-        public IActionResult Register(Account account) // POST
+        public ActionResult Register(Account account) // POST
         {
 
             if (ModelState.IsValid)
@@ -95,21 +96,22 @@ namespace VuelaLibre.Controllers
             return Convert.ToBase64String(hash);
         }
         [HttpGet]
-        public IActionResult CrearVuelo()
+        public ActionResult CrearVuelo() // GET
         {
-            return View(new Account());
+            return View(new Vuelos());
         }
+
         [HttpPost]
-        public IActionResult CrearVuelo(Account account) // POST
+        public ActionResult CrearVuelo(Vuelos vuelo) // POST
         {
 
             if (ModelState.IsValid)
             {
-                _context.Accounts.Add(account);
+                _context.Vuelo.Add(vuelo);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View("CrearVuelo", account);
+            return View(vuelo);
         }
     }
 }
